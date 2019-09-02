@@ -8,21 +8,23 @@ AWS.config.update({ region: "us-east-2" });
 var ddb = new AWS.DynamoDB();
 
 var params = {
-  TableName: "youtubeTable",
+  TableName: "civitest2",
   Key: {
-    DeviceId: { S: "NodeDevice1" },
-    TimeStamp: { S: "1566553626391" }
+    DeviceId: { S: "cividevice1" },
+    Timestamp: { S: "1567414865469" }
   }
 };
 
-// Call DynamoDB to read the item from the table
-ddb.getItem(params, function(err, data) {
+ddb.getItem(params, function (err, data) {
   if (err) {
     console.log("Error", err);
   } else {
+    console.log(data);
     var obj = data.Item.data["M"].state["M"].reported["M"];
-    console.log(obj.color);
-    console.log(obj.temperature);
-    console.log(obj.DeviceId);
+    console.log(obj.humidity);
+    // var obj = data.Item.data["M"].state["M"].reported["M"];
+    // console.log(obj.color);
+    // console.log(obj.temperature);
+    // console.log(obj.DeviceId);
   }
 });
