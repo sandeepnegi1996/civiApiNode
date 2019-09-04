@@ -19,9 +19,9 @@ ddb.getItem(params, function (err, data) {
   if (err) {
     console.log("Error", err);
   } else {
-    console.log(data);
+    // console.log(data);
     var obj = data.Item.data["M"].state["M"].reported["M"];
-    console.log(obj.humidity);
+    console.log(obj);
     // var obj = data.Item.data["M"].state["M"].reported["M"];
     // console.log(obj.color);
     // console.log(obj.temperature);
