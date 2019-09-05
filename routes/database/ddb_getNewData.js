@@ -48,7 +48,17 @@ ddb.query(params, function (err, data) {
         console.log("Error", err);
     } else {
         //   console.log(data);
-        console.log(data.Items);
+        console.log(data.Items[0].DeviceID);
+        console.log(data.Items[0].data);
+        console.log(typeof data.Items[0].data);
+        // var objt = JSON.stringify(data.Items);
+        // console.log(objt);
+
+        // data.Items.forEach(element => {
+        //     console.log(element);
+
+        // });
+
         // var obj = data.Item.data["M"].state["M"].reported["M"];
         //console.log(obj);
         // var obj = data.Item.data["M"].state["M"].reported["M"];
