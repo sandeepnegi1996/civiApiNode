@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.519.0",
+    "aws-sdk": "^2.524.0",
+    "claudia-api-builder": "^4.1.2",
     "dynamodb-data-types": "^3.0.1",
     "dynamoose": "^1.11.1",
     "express": "^4.17.1",

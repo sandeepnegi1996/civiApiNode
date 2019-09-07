@@ -70,6 +70,7 @@ router.get("/test", (req, res) => {
     res.json("request checking dynamo db");
 });
 
+
 module.exports = router;
 
 
