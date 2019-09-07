@@ -41,6 +41,8 @@ router.post("/", (req, res) => {
             console.log(finalDataObj.DeviceID);
 
             var finaldataReturn = {
+
+                TableName: data.dbTableName,
                 DeviceID: finalDataObj.DeviceID,
                 Battery: finalDataObj.Battery,
                 AccelerationX: finalDataObj.AccelerationX,
